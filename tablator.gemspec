@@ -12,12 +12,14 @@ Gem::Specification.new do |s|
   s.homepage    = "bobbytables.github.com/tablator"
   s.summary     = "Tablator is a Rails helper for generating tables easily."
   s.description = "Create tablular data easily with a symantic DSL."
+  s.files       = `git ls-files`.split("\n")
+  s.require_paths = ["lib"]
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
-  s.test_files = Dir["test/**/*"]
 
   s.add_dependency "rails", "~> 3.2.1"
 
   s.add_development_dependency "sqlite3"
   s.add_development_dependency "rspec", "~> 2.9"
+  s.add_development_dependency "pry"
 end
